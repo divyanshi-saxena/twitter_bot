@@ -6,7 +6,7 @@ module.exports = function (passport) {
     consumerKey: process.env.TWITTER_API_KEY,
     consumerSecret: process.env.TWITTER_API_SECRET,
     callbackURL: '/auth/twitter/callback',
-    proxy: true
+    // proxy: true
     },
     async (token, tokenSecret, profile, done) => {
       const newUser = {
