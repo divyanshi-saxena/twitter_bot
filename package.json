@@ -1,0 +1,38 @@
+{
+  "name": "twitter_bot",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.18.4"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyanshi-saxena/twitter_bot.git"
+  },
+  "author": "divyanshi saxena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/divyanshi-saxena/twitter_bot/issues"
+  },
+  "homepage": "https://github.com/divyanshi-saxena/twitter_bot#readme",
+  "dependencies": {
+    "connect-mongo": "^4.4.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^5.12.11",
+    "node-cron": "^3.0.0",
+    "passport": "^0.4.1",
+    "passport-twitter": "^1.0.4",
+    "path": "^0.12.7",
+    "twit": "^2.2.11"
+  }
+}

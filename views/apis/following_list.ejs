@@ -1,0 +1,46 @@
+<%- include('../partials/header'); -%>
+  <%- include('../partials/sidebar'); -%>
+    <div class="main-content">
+      <main>
+        <div class="projects">
+          <div class="table-outer">
+            <!-- instead of card => table-outer -->
+            <div class="table-header">
+              <!-- instead of card-header => table-header -->
+              <h3>Following list</h3>
+              <!-- <button>See all <span class="las la-arrow-right"></span></button> -->
+            </div>
+            <div class="table-body">
+              <!-- instead of card-body => table-body -->
+              <div class="table-responsive">
+                <table width="100%">
+                  <% if(code==1) { %>
+                  <thead>
+                    <tr>
+                      <td>Name</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% resp.forEach((a)=> { %>
+                      <tr>
+                        <td>
+                          <%= a.userName %>
+                        </td>
+                      </tr>
+                      <% }) %>
+                      <% } else if(code==0) { %>
+                        <tr>
+                          <td>
+                            <%= noData %>
+                          </td>
+                        </tr>
+                        <% } %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <%- include('../partials/footer'); -%>

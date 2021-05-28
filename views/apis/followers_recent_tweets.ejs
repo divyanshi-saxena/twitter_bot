@@ -1,0 +1,57 @@
+<%- include('../partials/header'); -%>
+  <%- include('../partials/sidebar'); -%>
+    <div class="main-content">
+      <main>
+        <div class="projects">
+          <div class="table-outer">
+            <div class="table-header">
+              <h3>Followers' Recent Tweets</h3>
+            </div>
+            <div class="table-body">
+              <div class="table-responsive">
+                <table width="100%">
+                  <% if(code == 1) { %>
+                  <thead>
+                    <tr>
+                      <td>Follower</td>
+                      <td>Tweet text</td>
+                      <td>Date</td>
+                      <td>Time</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% array.forEach((a)=> { %>
+                      <tr>
+                        <td>
+                          <%= a.userName %>
+                        </td>
+                        <td>
+                          <%= a.tweetMsg %>
+                        </td>
+                        <td>
+                          <%= a.date %>
+                        </td>
+                        <td>
+                          <%= a.time %>
+                        </td>
+                      </tr>
+                      <% }) %>
+
+                  <% } else if(code == 0) { %>
+
+                    <tr>
+                      <td>
+                        <%= noData %>
+                      </td>
+                    </tr>
+               <% } %>
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <%- include('../partials/footer'); -%>
